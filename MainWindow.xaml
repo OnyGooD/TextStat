@@ -1,0 +1,41 @@
+﻿<Window x:Class="TextStat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextStat"
+        mc:Ignorable="d"
+        Title="Text Stat" Height="600" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="textEl" Grid.Row="0" Margin="10px" TextChanged="textEl_TextChanged" TextWrapping="Wrap"/>
+        <Grid Grid.Row="1" Margin="10px">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="charNumberEl" Grid.Row="1" Grid.Column="0" Content="0" FontSize="50px" FontWeight="Bold"/>
+            <Label x:Name="wordNumberEl" Grid.Row="1" Grid.Column="1" Content="0" FontSize="50px" FontWeight="Bold"/>
+            <Label x:Name="sentenceNumberEl" Grid.Row="1" Grid.Column="2" Content="0" FontSize="50px" FontWeight="Bold"/>
+
+            <Label Grid.Row="1" Grid.Column="0" Content="Karakter" FontSize="30px" Margin="5, 70, 0, 0"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="Szó" FontSize="30px" Margin="5, 70, 0, 0"/>
+            <Label Grid.Row="1" Grid.Column="2" Content="Mondat" FontSize="30px" Margin="5, 70, 0, 0"/>
+
+            <Label x:Name="readTimeEl" Content="Olvasási idő &lt;1 perc" HorizontalAlignment="Right" Grid.Row="0" Grid.Column="2"/>
+            <CheckBox x:Name="withoutSpaceEl" Content="Szóköz nélkül" Grid.Row="0" Grid.Column="0" Checked="withoutSpaceEl_Checked"/>
+        </Grid>
+        
+    </Grid>
+</Window>
